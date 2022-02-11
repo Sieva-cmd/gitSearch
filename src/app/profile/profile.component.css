@@ -23,7 +23,7 @@
 .label{
     margin-left: 10px;
     /* border: 3px solid black; */
-    border-radius: 5px;
+    border-radius: 3px;
 }
 #default{
     background-color: rgb(56, 53, 53);
@@ -36,4 +36,12 @@
 #success{
     background-color: rgb(63, 228, 63);
     color: white;
+}
+p a{
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: rgb(179, 218, 101);
+    color: white;
+    margin-left: 10px;
+    
 }
