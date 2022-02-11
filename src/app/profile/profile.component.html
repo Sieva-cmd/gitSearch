@@ -1,6 +1,12 @@
+<Div *ngIf='profile'>
+
+    <div class="panel panel default">
+        <div class="panel-heading">
+            {{ profile.name }}   <small> ({{ profile.login }})</small>
+        </div>
+    </div>
+</Div>
 
 
 
-
-<p> {{ profile.name }}</p>
 <p>{{ profile.company }}</p>

@@ -19,7 +19,7 @@ export class ProfileService {
     console.log("service is working");
     this.username = 'Sieva-cmd';
 
-    this.profile = new Profile("", "", "", "", "", "", "", "");
+    this.profile = new Profile("", "", "", "", "", "", "", "", "");
   }
 
   getProfileInfo() {
@@ -31,7 +31,8 @@ export class ProfileService {
       public_repos: string;
       followers: string;
       following: string;
-      html_url: string
+      html_url: string;
+      login:string
     }
 
     let promise = new Promise((resolve, reject) =>{
@@ -44,6 +45,7 @@ export class ProfileService {
         this.profile.following = response!.following;
         this.profile.html_url = response!.html_url;
         this.profile.public_repos = response!.public_repos;
+        this.profile.login = response!.login
 
         resolve(null)
       },
