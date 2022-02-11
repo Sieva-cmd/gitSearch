@@ -2,9 +2,9 @@
     margin-top: 200px;
 }
 
-.card {
+/* .card {
     width: 600px;
-}
+} */
 
 .circular--landscape {
     display: inline-block;
@@ -18,5 +18,22 @@
 .circular--landscape img {
     width: auto;
     height: 100%;
-    margin-left: -12px;
+    /* margin-left: -12px; */
+}
+.label{
+    margin-left: 10px;
+    /* border: 3px solid black; */
+    border-radius: 5px;
+}
+#default{
+    background-color: rgb(56, 53, 53);
+    color: white;
+}
+#primary{
+    background-color: rgb(107, 107, 230);
+    color: white;
+}
+#success{
+    background-color: rgb(63, 228, 63);
+    color: white;
 }

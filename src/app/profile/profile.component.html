@@ -1,28 +1,45 @@
-
-
 <br>
 <Div *ngIf='profile' class="profile">
     <div class="card">
         <div class="card-body">
             <div class="panel panel default">
                 <div class="panel-heading">
-                    {{ profile.name }}   <small> ({{ profile.login }})</small>,
-                    <span *ngIf ="profile.company"> works at {{ profile.company }}</span>
+                    {{ profile.name }} <small> ({{ profile.login }})</small>,
+                    <span *ngIf="profile.company"> works at {{ profile.company }}</span>
                 </div>
 
                 <div class="panel-body">
                     <div class="row">
-                        <!-- <div class="col-sm-3">
-                            <img src="{{ profile.avatar_url }}" class="img-circle  img-responsive" alt=" profile image">
-                        </div> -->
-                        <div class="circular--landscape"> <img src="{{ profile.avatar_url }}" /> </div>
+                        <div class="col-sm-3">
+                            <div class="circular--landscape"> <img src="{{ profile.avatar_url }}" /> </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <ul class="list-group">
+                                <li class="list-group-item" *ngIf="profile.hireable"> Available for hire </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <div>
+                                <p>
+                                    <span class="label label-default" id="default">
+                                        {{ profile.followers }} Followers
+                                    </span>
+                                    <span class="label label-primary" id="primary">
+                                        Following {{ profile.following }}
+                                    </span>
+                                    <span class="label label-success " id="success">
+                                        Repositories {{ profile.public_repos }}
+                                    </span>
+                                    
+                                </p>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
             </div>
         </div>
-      </div>   
+    </div>
 </Div>
-
-
-
