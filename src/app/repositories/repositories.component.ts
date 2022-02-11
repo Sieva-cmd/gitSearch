@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Repostories } from '../repostories';
+import { ProfileService } from '../profile-service/profile.service'
 
 @Component({
   selector: 'app-repositories',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./repositories.component.css']
 })
 export class RepositoriesComponent implements OnInit {
+  
 
-  constructor() { }
+  repos:any ;
+  constructor(private repoService: ProfileService ) {
+    
+  
 
-  ngOnInit(): void {
+  }
+
+  ngOnInit() {
+    this.repoService.getRepoInfo();
+    this.repos = this.repoService.repos;
   }
 
 }

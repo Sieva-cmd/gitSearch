@@ -3,7 +3,12 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <div class="panel-title">
-            Repositories
+            <h5>Repositories</h5>
+        </div>
+        <div class="panel-body" *ngFor = "let repo of repos">
+            <ul>
+                <li>{{ repo.name }}</li>
+            </ul>
         </div>
     </div>
 </div>

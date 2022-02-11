@@ -8,12 +8,14 @@ import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
 import { RepositoriesComponent } from './repositories/repositories.component';
+import { SearchFormComponent } from './search-form/search-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,
