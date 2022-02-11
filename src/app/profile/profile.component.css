@@ -1,7 +1,22 @@
-.profile{
+.profile {
     margin-top: 200px;
 }
 
-.card{
+.card {
     width: 600px;
+}
+
+.circular--landscape {
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 120%;
+}
+
+.circular--landscape img {
+    width: auto;
+    height: 100%;
+    margin-left: -12px;
 }

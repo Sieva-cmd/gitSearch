@@ -9,6 +9,16 @@
                     {{ profile.name }}   <small> ({{ profile.login }})</small>,
                     <span *ngIf ="profile.company"> works at {{ profile.company }}</span>
                 </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <!-- <div class="col-sm-3">
+                            <img src="{{ profile.avatar_url }}" class="img-circle  img-responsive" alt=" profile image">
+                        </div> -->
+                        <div class="circular--landscape"> <img src="{{ profile.avatar_url }}" /> </div>
+
+                    </div>
+                </div>
             </div>
         </div>
       </div>   
