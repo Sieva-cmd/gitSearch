@@ -29,11 +29,13 @@
                                         Following {{ profile.following }}
                                     </span>
                                     <span class="label label-success " id="success">
-                                        Repositories {{ profile.public_repos }}
+                                        Public repos {{ profile.public_repos }}
                                     </span>
 
                                 </p>
                                 <p> <a href="{{ profile.html_url }}" target=" _blank"> view profile in Github</a></p>
+
+                                <app-repositories></app-repositories>
                             </div>
                         </div>
 
