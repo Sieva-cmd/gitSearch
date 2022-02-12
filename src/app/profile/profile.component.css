@@ -89,3 +89,7 @@ p a{
 footer{
     margin-bottom: 50px;
 }
+
+.pb-4 a{
+    margin-left: 30px;
+}
