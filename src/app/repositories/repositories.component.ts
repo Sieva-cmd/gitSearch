@@ -23,7 +23,7 @@ export class RepositoriesComponent implements OnInit {
   }
 
   getRepoInfo(){
-    this.http.get<any>(environment.repoUrl).subscribe(
+    this.http.get<any>("https://api.github.com/users/Sieva-cmd/repos").subscribe(
       response =>{
          console.log(response);
         this.repos = response;

@@ -2,16 +2,11 @@ import { Injectable } from '@angular/core';
 import { Profile } from '../profile-class/profile';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-// import { Repostories } from '../repostories';
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
-  subscribe(arg0: (res: any) => any) {
-    throw new Error('Method not implemented.');
-  }
 
   private username!: string;
   private clientID = '79b5763e808d746f79ff';
@@ -19,15 +14,13 @@ export class ProfileService {
 
 
   profile!: Profile;
-  // repos!: Repostories;
-
-
+  
   constructor(private http: HttpClient) {
     console.log("service is working");
     this.username = 'Sieva-cmd';
 
     this.profile = new Profile("", "", "", "", "", "", "", "", "");
-    // this.repos = new Repostories("", "", "");
+    
 
   }
 
@@ -71,36 +64,30 @@ export class ProfileService {
   }
   // getRepoInfo() {
 
-  //   return this.http.get(environment.apiUrl + this.username +"/repos?client_id =" + this.clientID +  this.clientID + "&clientsecret =" + this.clientSecret ).toPromise().then(response =>{
+  //   interface ApiResponse {
+  //     name: string;
+  //     repos_url: string;
+  //     description: string;
 
-  //   });
+  //   }
 
-
-
-  //   // interface ApiResponse {
-  //   //   name: string;
-  //   //   repos_url: string;
-  //   //   description: string;
-
-  //   // }
-
-  //   // let promise = new Promise((resolve, reject) => {
-  //   //   this.http.get<ApiResponse>(environment.apiUrl + this.username + "/repos?client_id =" + this.clientID + "&clientsecret =" + this.clientSecret).toPromise().then(response => {
-  //   //     this.repos.name = response!.name;
-  //   //     this.repos.description = response!.description;
-  //   //     this.repos.repos_url = response!.repos_url;
+  //   let promise = new Promise((resolve, reject) => {
+  //     this.http.get<ApiResponse>(environment.apiUrl + this.username + "/repos?client_id =" + this.clientID + "&clientsecret =" + this.clientSecret).toPromise().then(response => {
+  //       this.repos.name = response!.name;
+  //       this.repos.description = response!.description;
+  //       this.repos.repos_url = response!.repos_url;
 
 
-  //   //     resolve(null)
-  //   //   },
-  //   //     error => {
-  //   //       console.log("Repositories not found");
+  //       resolve(null)
+  //     },
+  //       error => {
+  //         console.log("Repositories not found");
 
-  //   //       reject(error)
-  //   //     });
-  //   // })
+  //         reject(error)
+  //       });
+  //   })
 
-  //   // return promise
+  //   return promise
 
 
   // }
@@ -109,4 +96,6 @@ export class ProfileService {
     this.username = username;
   }
 }
+
+
 

@@ -1,50 +1,235 @@
+<!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
 
-<app-search-form></app-search-form>
-<br>
-<Div *ngIf='profile' class="profile">
-    <div class="card">
-        <div class="card-body">
-            <div class="panel panel default">
-                <div class="panel-heading">
-                    {{ profile.name }} <small> ({{ profile.login }})</small>,
-                    <span *ngIf="profile.company"> works at {{ profile.company }}</span>
+        <!-- Brand -->
+        <a class="navbar-brand" href="#" target="_blank">
+            <strong>Github Search </strong>
+        </a>
+
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><i class="fas fa-user-check"></i>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Right -->
+            <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                    <a href="https://www.facebook.com/" class="nav-link" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://twitter.com/" class="nav-link" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/Sieva-cmd/" class="nav-link border border-light rounded"
+                        target="_blank">
+                        <i class="fab fa-github mr-2"></i>GitHub
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+<!--Carousel Wrapper-->
+<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+    </ol>
+    <!--/.Indicators-->
+
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+            <div class="view">
+
+                <!--Video source-->
+                <!-- <video class="video-intro" autoplay loop muted>
+                    <source src="https://mdbootstrap.com/img/video/city.mp4" type="video/mp4" >
+                </video> -->
+
+                <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+                    <!-- Content -->
+                    <div class="text-center  mx-5 wow fadeIn">
+                        <h3 class="mb-4">
+                            <h2 class="h2 text-info mb-3 animated bounce infinite
+                        ">Search on Your Profile in Github <i class="fas fa-id-card"></i></h2>
+
+                        </h3>
+                        <h3 class="mb-4">
+                            <h2 class="h2 text-info mb-3 animated bounce infinite
+                        ">Search on Your repositories in Github <i class="fas fa-id-card"></i></h2>
+
+                        </h3>
+
+                        <div class="mb-4">
+                            <!-- Search form -->
+                            <input class="form-control" name="userName" type="text" placeholder="Search"
+                                aria-label="Search" [(ngModel)]="username" name="username " (keyup)="findProfile()">
+
+                        </div>
+                        <!-- <div class="mb-4">
+                            <a target="_blank" class="btn btn-outline-white btn-lg text-info" type="button">Find User
+                                <i class="fas fa-search ml-2 animated wobble infinite"></i>
+                            </a>
+                        </div> -->
+
+                    </div>
+
+                    <!-- Mask & flexbox options-->
+
+                    <!-- Mask & flexbox options-->
+
                 </div>
-
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="circular--landscape"> <img src="{{ profile.avatar_url }}" /> </div>
+            </div>
+            <!--/First slide-->
+        </div>
+        <br>
+        <br><br> <br>
+        <Div *ngIf='profile' class="profile">
+            <div class="card">
+                <div class="card-body">
+                    <div class="panel panel default">
+                        <div class="panel-heading">
+                            {{ profile.name }} <small> ({{ profile.login }})</small>,
+                            <span *ngIf="profile.company"> works at {{ profile.company }}</span>
                         </div>
 
-                        <div class="col-sm-3">
-                            <ul class="list-group">
-                                <li class="list-group-item" *ngIf="profile.hireable"> Available for hire </li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6">
-                            <div>
-                                <p>
-                                    <span class="label label-default" id="default">
-                                        {{ profile.followers }} Followers
-                                    </span>
-                                    <span class="label label-primary" id="primary">
-                                        Following {{ profile.following }}
-                                    </span>
-                                    <span class="label label-success " id="success">
-                                        Public repos {{ profile.public_repos }}
-                                    </span>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="circular--landscape"> <img src="{{ profile.avatar_url }}" /> </div>
+                                </div>
 
-                                </p>
-                                <p> <a href="{{ profile.html_url }}" target=" _blank"> view profile in Github</a></p>
+                                <div class="col-sm-3">
+                                    <ul class="list-group">
+                                        <li class="list-group-item" *ngIf="profile.hireable"> Available for hire </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div>
+                                        <p>
+                                            <span class="label label-default" id="default">
+                                                {{ profile.followers }} Followers
+                                            </span>
+                                            <span class="label label-primary" id="primary">
+                                                Following {{ profile.following }}
+                                            </span>
+                                            <span class="label label-success " id="success">
+                                                Public repos {{ profile.public_repos }}
+                                            </span>
 
-                                <app-repositories></app-repositories>
+                                        </p>
+                                        <p> <a href="{{ profile.html_url }}" target=" _blank"> view profile in
+                                                Github</a></p>
+
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class="panel-title">
+                                                    <h5>Repositories</h5>
+                                                </div>
+                                                <div class="panel-body" *ngFor="let repo of repos">
+                                                    <ul>
+                                                        <li>{{ repo.name }} <a href="{{ repo.repos_url }}"
+                                                                target="_blank"> View repository in Github</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
+        </Div>
         </div>
+</div>
+ <!--Footer-->
+ <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4 scroll-to-top"  >
+      <a class="btn btn-outline-white" href="#" role="button">Scroll to Top
+        <i class="fas fa-arrow-up"></i>
+      </a>
+      <a class="btn btn-outline-white"  href="https://github.com/Sieva-cmd/" target="_blank" role="button">Visit on Github
+        <i class="fas fa-rocket"></i>
+      </a>
     </div>
-</Div>
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+      <a href="https://www.facebook.com/" target="_blank">
+        <i class="fab fa-facebook-f mr-3"></i>
+      </a>
+
+      <a href="https://twitter.com/" target="_blank">
+        <i class="fab fa-twitter mr-3"></i>
+      </a>
+
+      <a href="https://www.youtube.com/" target="_blank">
+        <i class="fab fa-youtube mr-3"></i>
+      </a>
+
+      <a href="https://plus.google.com/" target="_blank">
+        <i class="fab fa-google-plus-g mr-3"></i>
+      </a>
+
+      <a href="https://dribbble.com/" target="_blank">
+        <i class="fab fa-dribbble mr-3"></i>
+      </a>
+
+      <a href="https://pinterest.com/" target="_blank">
+        <i class="fab fa-pinterest mr-3"></i>
+      </a>
+
+      <a href="https://github.com/" target="_blank">
+        <i class="fab fa-github mr-3"></i>
+      </a>
+
+      <a href="http://codepen.io/" target="_blank">
+        <i class="fab fa-codepen mr-3"></i>
+      </a>
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2019 Copyright:
+      <a href="#" target="_blank"> Sieva Lucia </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
