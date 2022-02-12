@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl :'https://api.github.com/users/'
+  apiUrl :'https://api.github.com/users/',
+  repoUrl:'https://api.github.com/users/Sieva-cmd/repos'
 };
 
 /*

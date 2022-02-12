@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Profile } from '../profile-class/profile';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Repostories } from '../repostories';
+// import { Repostories } from '../repostories';
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class ProfileService {
 
 
   profile!: Profile;
-  repos!: Repostories;
+  // repos!: Repostories;
 
 
   constructor(private http: HttpClient) {
@@ -26,7 +27,7 @@ export class ProfileService {
     this.username = 'Sieva-cmd';
 
     this.profile = new Profile("", "", "", "", "", "", "", "", "");
-    this.repos = new Repostories("", "", "");
+    // this.repos = new Repostories("", "", "");
 
   }
 
@@ -68,38 +69,44 @@ export class ProfileService {
 
 
   }
-  getRepoInfo() {
+  // getRepoInfo() {
 
-    interface ApiResponse {
-      name: string;
-      repos_url: string;
-      description: string;
+  //   return this.http.get(environment.apiUrl + this.username +"/repos?client_id =" + this.clientID +  this.clientID + "&clientsecret =" + this.clientSecret ).toPromise().then(response =>{
 
-    }
-
-    let promise = new Promise((resolve, reject) => {
-      this.http.get<ApiResponse>(environment.apiUrl + this.username + "/repos?client_id =" + this.clientID + "&clientsecret =" + this.clientSecret).toPromise().then(response => {
-        this.repos.name = response!.name;
-        this.repos.description = response!.description;
-        this.repos.repos_url = response!.repos_url;
+  //   });
 
 
-        resolve(null)
-      },
-        error => {
-          console.log("Repositories not found");
 
-          reject(error)
-        });
-    })
+  //   // interface ApiResponse {
+  //   //   name: string;
+  //   //   repos_url: string;
+  //   //   description: string;
 
-    return promise
+  //   // }
+
+  //   // let promise = new Promise((resolve, reject) => {
+  //   //   this.http.get<ApiResponse>(environment.apiUrl + this.username + "/repos?client_id =" + this.clientID + "&clientsecret =" + this.clientSecret).toPromise().then(response => {
+  //   //     this.repos.name = response!.name;
+  //   //     this.repos.description = response!.description;
+  //   //     this.repos.repos_url = response!.repos_url;
 
 
-  }
+  //   //     resolve(null)
+  //   //   },
+  //   //     error => {
+  //   //       console.log("Repositories not found");
 
-  updateProfile(username:string){
-this.username = username;
+  //   //       reject(error)
+  //   //     });
+  //   // })
+
+  //   // return promise
+
+
+  // }
+
+  updateProfile(username: string) {
+    this.username = username;
   }
 }
 

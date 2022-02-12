@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Repostories } from '../repostories';
-import { ProfileService } from '../profile-service/profile.service'
+import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-repositories',
@@ -10,17 +11,24 @@ import { ProfileService } from '../profile-service/profile.service'
 export class RepositoriesComponent implements OnInit {
   
 
-  repos:any = [];
+  repos!:Repostories []; 
 
-  constructor(private repoService: ProfileService ) {
-  
-  
+  constructor( private http:HttpClient) {
 
   }
 
   ngOnInit() {
-    this.repoService.getRepoInfo();
-    this.repos = this.repoService.repos;
+    this.getRepoInfo();
+  
+  }
+
+  getRepoInfo(){
+    this.http.get<any>(environment.repoUrl).subscribe(
+      response =>{
+         console.log(response);
+        this.repos = response;
+      }
+    );
   }
 
 }
