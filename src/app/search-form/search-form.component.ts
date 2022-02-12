@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+ import { ProfileService } from '../profile-service/profile.service';
+
 
 @Component({
   selector: 'app-search-form',
@@ -6,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-form.component.css']
 })
 export class SearchFormComponent implements OnInit {
+username!:string;
+  constructor(private profileService:ProfileService) {
 
-  constructor() { }
+   }
+
+   findProfile(){
+    this.profileService.updateProfile(this.username)
+  }
 
   ngOnInit(): void {
   }

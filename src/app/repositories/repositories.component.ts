@@ -10,9 +10,10 @@ import { ProfileService } from '../profile-service/profile.service'
 export class RepositoriesComponent implements OnInit {
   
 
-  repos:any ;
+  repos:any = [];
+
   constructor(private repoService: ProfileService ) {
-    
+  
   
 
   }
