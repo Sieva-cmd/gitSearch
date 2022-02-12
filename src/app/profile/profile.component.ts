@@ -36,22 +36,24 @@ export class ProfileComponent implements OnInit {
     this.profileService.getProfileInfo()
     this.profile = this.profileService.profile
     this.getRepoInfo();
+  
   }
 
   ngOnInit() {
-    
-
-
+  
   }
 
     getRepoInfo(){
-      this.http.get<any>(environment.repoUrl).subscribe(
+      this.http.get<any>(environment.apiUrl +this.username + this.profileName).subscribe(
         response =>{
            console.log(response);
           this.repos = response;
+    
         }
       );
     }
+
+  
 
 
 
