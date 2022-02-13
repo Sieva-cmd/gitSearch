@@ -25,6 +25,17 @@ Am a full stack  developer.
 |:------------------:|:--:|:------------:||:--------------:|
 |:----------------------------------------------------------------------:|:----------------:|:-------:|
 
+## set up instructions
+-  Go to  Github  using the Link provided.
+-  Copy repository link in the Code section
+-  Clone it to your local machine Using the repository link.
+- open your terminal 
+- cd to your project folder
+- if you don't have a folder cd Documents and mkdir myProject
+- cd myProject and write the command below to clone repository
+- git clone https://github.com/Sieva-cmd/gitSearch.git
+- you already have the GitSearch application in your local machine
+
 
 ## Development server
 
