@@ -6,8 +6,10 @@ import { ProfileComponent } from './profile/profile.component';
 const routes: Routes = [
 
   { path: 'profile', component: ProfileComponent },
-  { path: '**', component: NotFoundComponent },
+ 
   {path:'', redirectTo:"/profile", pathMatch:"full"},
+
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
