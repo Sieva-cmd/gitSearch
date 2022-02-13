@@ -12,6 +12,19 @@ Am a full stack  developer.
 ![Website image]()
 ![Website image]()
 
+## BDD
+|Behavior </br>Our program should haddle | Input Example </br>When it receives |Output Example </br> It should return |
+|:--------------------------------------:|:-----------------------------------:|:------------------------------------:|
+|Search your github username |Example Sieva-cmd |Displays username Sieva Lucia </br> with repositories|
+|:---------------------------------------------------------:|:--:|:---------:|
+|Click view  profile in github | Your github account </br> loads in blank page |  |
+|:-------------------------------------------------------:|:--:|:-----------:|
+|Click view repository in github|opens the specific </br> repository in blank page |  |
+|:------------------:|:--:|:------------:|
+|Search your github username|Dispalys your followers and number of repositories| |
+|:------------------:|:--:|:------------:||:--------------:|
+|:----------------------------------------------------------------------:|:----------------:|:-------:|
+
 
 ## Development server
 
