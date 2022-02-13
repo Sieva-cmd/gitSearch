@@ -9,8 +9,10 @@ Am a full stack  developer.
 
 
 ## website image
-![Website image]()
-![Website image]()
+![Website image](https://github.com/Sieva-cmd/gitSearch/blob/master/src/assets/webimage.png)
+
+
+![Website image](https://github.com/Sieva-cmd/gitSearch/blob/master/src/assets/webImage.png)
 
 ## BDD
 |Behavior </br>Our program should haddle | Input Example </br>When it receives |Output Example </br> It should return |
