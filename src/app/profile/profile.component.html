@@ -128,7 +128,7 @@
                                 </div>
 
                                 <div class="col-sm-3">
-                                   
+
                                 </div>
                                 <div class="col-sm-5">
                                     <div>
@@ -156,7 +156,8 @@
                                                 <div class="panel-body" *ngFor="let repo of repos">
                                                     <ul>
                                                         <li>{{ repo.name }} <a href="{{ repo.repos_url }}"
-                                                                target="_blank"> View repository in Github</a></li>
+                                                                target="_blank"> View repository in Github</a> <br>
+                                                            {{repo.description }}</li>
                                                     </ul>
                                                 </div>
                                             </div>

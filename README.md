@@ -1,6 +1,17 @@
 # GithubSearch
+GithubSearch is an application where one can search their github username and view their repositories.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+
+#### By 
+- [sieva Lucia](https://github.com/Sieva-cmd)
+Am a full stack  developer.
+
+
+## website image
+![Website image]()
+![Website image]()
+
 
 ## Development server
 

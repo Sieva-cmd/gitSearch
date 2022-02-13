@@ -93,3 +93,11 @@ footer{
 .pb-4 a{
     margin-left: 30px;
 }
+
+.panel-body ul li a{
+    text-decoration: none;
+}
+.panel-body ul li{
+    font-weight: bold;
+}
+

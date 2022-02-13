@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     RepositoriesComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
